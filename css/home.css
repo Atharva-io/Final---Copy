@@ -1,0 +1,481 @@
+/* ==========================================================================
+   Sakura Pink Website Styles
+   Version: 1.0
+
+/* ==========================================================================
+   1. IMPORTS & GLOBAL RESET
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+/* ==========================================================================
+   2. PAGE WRAPPERS & BACKGROUNDS
+   ========================================================================== */
+
+/* 1. Give each section a 3D context */
+.page {
+  perspective: 600px;
+}
+/* 2. Make sure transforms affect the whole section */
+.page-content {
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+
+.page {
+    padding: 40px;
+    min-height: 100vh;
+}
+
+.page-black {
+    background-color: #000;
+    color: #fff;
+}
+
+.page-white {
+    background-color: #fff;
+    color: #000;
+}
+/* ==========================================================================
+   3. BODY SPACING (for fixed headers)
+   ========================================================================== */
+body {
+  padding-top: 72px; /* adjust if header height changes */
+}
+/* ==========================================================================
+   4. HEADER & NAV
+   ========================================================================== */
+.site-header {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: rgba(0, 0, 0, 0.6);  /* semi‐transparent black */
+  z-index: 1000;
+}
+
+
+
+/* Menu and Contact buttons */
+.site-header .menu,
+.site-header .contact {
+  flex: 0 0 auto;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Center logo stack */
+.site-header .logo-container {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none; /* so clicks on blank area pass through */
+}
+.site-header .logo-container .logo {
+  height: 50px;
+  pointer-events: auto; /* re-enable clicks on the logo itself if needed */
+}
+.site-header .logo-container .logo-text {
+  margin-top: 4px;
+  font-size: 14px;
+  color: pink;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Ensure page content starts below the header */
+body {
+  padding-top: calc(12px /* pt */ + 50px /* logo */ + 4px /* gap */ + 12px /* pb */ + 18px /* menu font-size */);
+  /* ≈96px total; adjust if you tweak header padding/font sizes */
+}
+/* ==========================================================================
+   5. LOGO (scrollable row under header)
+   ========================================================================== */
+/* — Logo row, scrolls away — */
+.header-logo {
+  width: 100%;                  /* span full viewport */
+  display: flex;
+  flex-direction: column;       /* stack logo + text */
+  align-items: center;          /* center children horizontally */
+  margin-top: 64px;             /* space under the fixed bar */
+  pointer-events: none;         /* clicks pass through if needed */
+}
+.header-logo .logo {
+  height: 60px;
+  pointer-events: auto;         /* re‑enable click if logo should be clickable */
+}
+.header-logo .logo-text {
+  margin-top: 4px;
+  font-size: 14px;
+  color: pink;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   MENU OVERLAY
+   ========================================================================== */
+.menu-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  z-index: 2000;
+}
+.menu-overlay.open {
+  transform: translateY(0);
+}
+.menu-overlay ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+.menu-overlay ul li {
+  margin: 1rem 0;
+}
+.menu-overlay ul li a {
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.menu-overlay ul li a:hover {
+  color: pink;
+}
+/* close “×” in top-right */
+.close-button {
+  position: absolute;
+  top: 20px; right: 20px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   6. MAIN TITLE (page 1)
+   ========================================================================== */
+/* — Home page video background — */
+#home {
+  position: relative;
+  overflow: hidden;
+}
+
+/* make the video fill the section */
+#home .bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 120%;           /* slightly over-scale to avoid letterboxing */
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;              /* behind the content */
+}
+
+/* ensure your text sits above the video */
+#home .page-content {
+  position: relative;
+  z-index: 1;
+}
+
+   .main-title {
+  font-size: 60px;
+  color: pink;
+  text-align: center;
+  margin-top: 150px;
+
+  /* Uniform outer shadow/glow */
+  text-shadow:
+    0 0 2px rgba(0,0,0,0.8),
+    0 0 4px rgba(0,0,0,0.6),
+    0 0 6px rgba(0,0,0,0.4);
+}
+/* ==========================================================================
+   7. FLEX LAYOUTS (Page 2)
+   ========================================================================== */
+.flex-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.left-heading {
+    color: #b80069;
+    font-size: 36px;
+    flex: 1;
+}
+
+.right-text {
+    flex: 1;
+    font-size: 18px;
+}
+
+/* ==========================================================================
+   8. VALUES SECTION (Page 3)
+   ========================================================================== */
+.values-section {
+  position: relative;
+  overflow: hidden;
+}
+.values-section .bg-video {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: auto;
+  height: 130%;            /* overshoot to cover tall/wide */
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+}
+.values-section .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* 50% black mask */
+  z-index: 1;
+}
+.values-section .page-content {
+  position: relative;
+  z-index: 2;               /* on top of video & overlay */
+  padding: 40px 20px;       /* ensure some breathing room */
+}
+
+.values-section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color:#ffb7ce; /* Sakura pink */
+}
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+.value h3 {
+  color: #ffb7ce;
+  margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   9. HIGHLIGHTS SECTION (Page 4)
+   ========================================================================== */
+.highlights-section {
+  background: #fff;
+  color: #000;
+}
+.highlights-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+.highlights-section .section-title {
+  font-size: 32px;
+  color: #b80069;      /* light pink */
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.highlights-section .section-intro {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+.highlights-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+/* image styling */
+.highlight-image img {
+  max-width: 350px;
+  width: 100%;
+  border: 2px solid #b80069;  /* Sakura pink */
+  border-radius: 4px;
+}
+/* list styling */
+.highlight-list {
+  list-style: none;
+  padding: 0;
+  flex: 1;
+}
+.highlight-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+.highlight-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #b80069;
+  font-size: 24px;
+  line-height: 1;
+}
+.highlight-list strong {
+  color: #b80069;
+}
+/* ==========================================================================
+   10. SUPPORTS SECTION (Page 5)
+   ========================================================================== */
+.supports-section {
+  background: #000;
+  color: #fff;
+}
+.supports-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+.supports-section .section-title {
+  font-size: 32px;
+  color: #ffb7ce; /* Sakura pink */
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.supports-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.support-text {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* marquee */
+.supports-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+}
+.marquee-content {
+  display: inline-block;
+  animation: marquee 12s linear infinite;
+  font-size: 18px;
+  color: #fff;
+  opacity: 0.8;
+}
+@keyframes marquee {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+/* ==========================================================================
+   11. DATA PREVIEW SECTION (Page 6)
+   ========================================================================== */
+.data-preview-section .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+.data-preview-section .section-title {
+  font-size: 32px;
+  color: #b80069;        /* light Sakura pink */
+  text-align: center;
+  margin-bottom: 16px;
+}
+.data-preview-section .section-intro {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.data-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+.data-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+.data-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #b80069;       /* Sakura pink */
+  font-size: 24px;
+  line-height: 1;
+}
+.data-list strong {
+  color: #b80069;
+}
+/* ==========================================================================
+   12. FOOTER SECTION
+   ========================================================================== */
+.footer-section {
+  background: #000;
+  color: #fff;
+}
+.footer-section .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+.footer-logo {
+  height: 50px;
+  margin-bottom: 24px;
+}
+.footer-nav {
+  margin-bottom: 24px;
+}
+.footer-nav a {
+  color: #fff;
+  margin: 0 16px;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-nav a:hover {
+  color: #b80069;  /* Sakura pink on hover */
+}
+.footer-social {
+  margin-bottom: 24px;
+}
+.footer-social a {
+  color: #fff;
+  margin: 0 8px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-social a:hover {
+  color: #b80069;
+}
+.footer-copy {
+  font-size: 14px;
+  opacity: 0.6;
+  line-height: 1.5;
+}

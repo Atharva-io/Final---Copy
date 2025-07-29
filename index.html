@@ -1,0 +1,288 @@
+<!--
+version: 1.0
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakura Biotech</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/menu.css" />
+</head>
+<body>
+<!-- =========================================
+       HEADER
+     ========================================= -->
+ <!-- SITE HEADER (always visible) -->
+  <header class="site-header">
+    <div class="contact">Contact 👤</div>
+
+    <div class="logo-container">
+      <img src="assets/logo.png" alt="Sakura Biotech Logo" class="logo">
+      <span class="logo-text">Sakura Biotech</span>
+    </div>
+
+    <div class="menu" id="menuToggle">☰ Menu</div>
+  </header>
+
+  <!-- MENU OVERLAY -->
+<input type="checkbox" id="main-navigation-toggle" class="btn btn--close" title="Toggle main navigation" />
+<label for="main-navigation-toggle">
+  <span></span>
+</label>
+
+<nav id="main-navigation" class="nav-main">
+  <ul class="menu">
+    <li class="menu__item">
+      <a class="menu__link" href="#0">Home</a>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="#0">About</a>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="#0">Clients</a>
+      <ul class="submenu">
+        <li class="menu__item">
+          <a class="menu__link" href="#0">Burger King</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#0">Southwest Airlines</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#0">Levi Strauss</a>
+        </li>
+      </ul>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="#0">Services</a>
+      <ul class="submenu">
+        <li class="menu__item">
+          <a class="menu__link" href="#0">Print Design</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#0">Web Design</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#0">Mobile App Development</a>
+        </li>
+      </ul>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="#0">Contact</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- =========================================
+       PAGE 1: FUNGUS AMONG US
+       ========================================= -->
+  <section class="page page-black" id="home">
+     <!-- Background video -->
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="assets/fungus-bg.mp4" type="video/mp4">
+    <!-- fallback image: -->
+    Your browser doesn’t support HTML5 video.
+  </video>
+    <div class="page-content">
+      <h1 class="main-title">FUNGUS AMONG US</h1>
+    </div>
+  </section>
+
+ <!-- =========================================
+       PAGE 2: INNOVATING AT THE INTERSECTION
+       ========================================= -->
+  <section class="page page-white flex-container" id="about">
+    <div class="page-content">
+    <h2 class="left-heading">
+      INNOVATING<br>
+      AT<br>
+      THE<br>
+      INTERSECTION<br>
+      OF<br>
+      BIOLOGY<br>
+      AND<br>
+      TECHNOLOGY
+    </h2>
+    <p class="right-text">
+      Sakura Biotech is a cutting-edge startup delivering sustainable biotech solutions through AI-driven research and smart automation.
+      We take a tech-forward approach to biotechnology, developing products that advance healthcare and food security while
+      maintaining a minimal and professional ethos.
+    </p>
+    </div>
+  </section>
+
+<!-- =========================================
+       PAGE 3: MISSION & VALUES
+       ========================================= -->
+ <section id="mission" class="page page-black values-section">
+  <!-- 1) Background video -->
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="assets/Alge-TL.mp4" type="video/mp4">
+    <!-- fallback image: -->
+    Your browser doesn’t support HTML5 video.
+  </video>
+
+  <!-- 2) Dark overlay to boost text contrast -->
+  <div class="overlay"></div>
+
+  <!-- 3) Content section -->
+    <div class="page-content">
+    <h2>MISSION &amp; VALUES</h2>
+    <p>
+      Our Mission: To develop innovative, ethical, and scalable biotech solutions for a healthier, more sustainable future. 
+      We aim to harness science and technology in harmony, addressing global challenges in health and agriculture without overexposing sensitive details. 
+       Our mission statement is short, aspirational, and clear, reflecting a serious commitment to impactful innovation.
+    </p>
+    <br>
+    <p>Our Core Values: We uphold a set of fundamental values that guide our work and culture:</p>
+    <div class="values-grid">
+      <div class="value">
+        <h3>INNOVATION</h3>
+        <p>Embrace creativity and advanced technology to push the boundaries of biotechnology. 
+            We continuously seek novel approaches, keeping our solutions tech-forward and effective.</p>
+      </div>
+      <div class="value">
+        <h3>INTEGRITY</h3>
+        <p>Conduct research and business with the highest ethical standards. 
+            Transparency, safety, and responsibility are paramount in every project.</p>
+      </div>
+      <div class="value">
+        <h3>SUSTAINABILITY</h3>
+        <p>Prioritize environmental stewardship and long-term viability. 
+            We design products that contribute to a sustainable future, aligning with climate resilience and eco-friendly practices.</p>
+      </div>
+      <div class="value">
+        <h3>COLLABORATION</h3>
+        <p>Work closely with scientists, industry partners, and the community. 
+            We believe corporate progress accelerates through teamwork, knowledge-sharing, and strong partnerships.</p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+<!-- =========================================
+       PAGE 4: HIGHLIGHTS & SUPPORTS
+       ========================================= -->
+<section id="highlights" class="page page-white highlights-section">
+  <div class="page-content">
+  <div class="container">
+    <h2 class="section-title">HIGHLIGHTS</h2>
+    <p class="section-intro">
+      Our Highlights section provides a snapshot of Sakura Biotech’s most notable achievements and milestones in a concise,
+      easy-to-scan list. This gives credibility to our startup without overwhelming detail:
+    </p>
+    <div class="highlights-content">
+      <div class="highlight-image">
+        <img src="assets/highlights.png" alt="Sakura Biotech highlights">
+      </div>
+      <ul class="highlight-list">
+        <li>
+          <strong>Incubation &amp; Support:</strong>
+          Selected for VJTI‑TBI and a‑IDEA (NAARM), backed by top innovators reflecting confidence in our vision.
+        </li>
+        <li>
+          <strong>Innovation Milestone:</strong>
+          Developed a working prototype of an AI‑driven IoT bioreactor for microalgae, showing improved efficiency.
+        </li>
+        <li>
+          <strong>Recognition:</strong>
+          Presented at CSIR Startup Conclave 2025, showcasing our sustainable biotech solutions on a national stage.
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- =========================================
+       PAGE 5: SUPPORTS & PREVIEW OF DATA
+       ========================================= -->
+<section id="supports" class="page page-black supports-section">
+  <div class="page-content">
+  <div class="container">
+    <h2 class="section-title">SUPPORTS</h2>
+    <div class="supports-content">
+      <p class="support-text">
+        We are grateful for the support that has propelled Sakura Biotech from idea to impact. This section acknowledges the institutions and programs backing us, lending authority to our mission:
+      </p>
+      <p class="support-text">
+        Sakura Biotech is supported by leading innovation hubs and research incubators, including VJTI Technology Business Incubator (Mumbai), a‑IDEA, NAARM‑TBI (Hyderabad), PDKV Research &amp; Incubation Foundation (Akola), and Venture Center (Pune). Their mentorship, resources, and belief in our vision help us accelerate our development responsibly.
+      </p>
+    </div>
+
+    <div class="supports-marquee">
+      <div class="marquee-content">
+        VJTI‑TBI  •  a‑IDEA  •  NAARM‑TBI  •  PDKV R&I  •  Venture Center  •  …more…
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- =========================================
+       PAGE 6: PREVIEW OF DATA
+       ========================================= -->
+<section id="preview-data" class="page page-white data-preview-section">
+  <div class="page-content">
+  <div class="container">
+    <h2 class="section-title">Preview of Data</h2>
+    <p class="section-intro">
+      Our Preview of Data section offers a quick glance at the impactful metrics and results from our work.  
+      Even on a minimal site, sharing a few data points helps validate our technology’s effectiveness in a professional manner:
+    </p>
+    <ul class="data-list">
+      <li>
+        <strong>Enhanced Yield:</strong>
+        Initial trials show up to 25% increase in biomass output in our bioreactors compared to conventional methods.
+      </li>
+      <li>
+        <strong>Continuous Operation:</strong>
+        Our prototype systems have run for 1,000+ hours of continuous operation, demonstrating reliability and endurance.
+      </li>
+      <li>
+        <strong>Data-Driven Insights:</strong>
+        Thousands of data points are analyzed daily by our AI algorithms, continuously optimizing conditions and improving efficiency.
+      </li>
+    </ul>
+  </div>
+  </div>
+</section>
+
+
+<!-- =========================================
+       PAGE 7: Footer
+       ========================================= -->
+<footer id="footer" class="page page-black footer-section">
+  <div class="container footer-content">
+    <!-- Logo -->
+    <img src="assets/logo.png" alt="Sakura Biotech Logo" class="footer-logo">
+
+    <!-- Quick Links -->
+    <nav class="footer-nav">
+      <a href="#highlights">Highlights</a>
+      <a href="#supports">Supports</a>
+      <a href="#preview-data">Data</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Social Icons (replace href/# with actual links and add your icons) -->
+    <div class="footer-social">
+      <a href="#" aria-label="Twitter">🐦</a>
+      <a href="#" aria-label="LinkedIn">🔗</a>
+      <a href="#" aria-label="GitHub">🐙</a>
+    </div>
+
+    <!-- Copyright -->
+    <p class="footer-copy">
+      &copy; 2025 Sakura Biotech Pvt. Ltd. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/home.js"></script>
+
+</body>
+</html>
