@@ -24,53 +24,32 @@ version: 1.0
       <span class="logo-text">Sakura Biotech</span>
     </div>
 
-    <div class="menu" id="menuToggle">☰ Menu</div>
+    <label for="main-navigation-toggle" class="menu" id="menuToggle">☰ Menu</label>
   </header>
 
   <!-- MENU OVERLAY -->
 <input type="checkbox" id="main-navigation-toggle" class="btn btn--close" title="Toggle main navigation" />
-<label for="main-navigation-toggle">
-  <span></span>
-</label>
 
 <nav id="main-navigation" class="nav-main">
+  <div class="close-btn" onclick="document.getElementById('main-navigation-toggle').checked = false;">×</div>
   <ul class="menu">
     <li class="menu__item">
-      <a class="menu__link" href="#0">Home</a>
+      <a class="menu__link" href="#home">Home</a>
     </li>
     <li class="menu__item">
-      <a class="menu__link" href="#0">About</a>
+      <a class="menu__link" href="#about">About</a>
     </li>
     <li class="menu__item">
-      <a class="menu__link" href="#0">Clients</a>
-      <ul class="submenu">
-        <li class="menu__item">
-          <a class="menu__link" href="#0">Burger King</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#0">Southwest Airlines</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#0">Levi Strauss</a>
-        </li>
-      </ul>
+      <a class="menu__link" href="#mission">Mission & Values</a>
     </li>
     <li class="menu__item">
-      <a class="menu__link" href="#0">Services</a>
-      <ul class="submenu">
-        <li class="menu__item">
-          <a class="menu__link" href="#0">Print Design</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#0">Web Design</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#0">Mobile App Development</a>
-        </li>
-      </ul>
+      <a class="menu__link" href="#highlights">Highlights</a>
     </li>
     <li class="menu__item">
-      <a class="menu__link" href="#0">Contact</a>
+      <a class="menu__link" href="#supports">Supports</a>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="#preview-data">Data Preview</a>
     </li>
   </ul>
 </nav>
