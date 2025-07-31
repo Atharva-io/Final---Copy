@@ -17,42 +17,25 @@ version: 1.0
      ========================================= -->
  <!-- SITE HEADER (always visible) -->
   <header class="site-header">
-    <div class="contact">Contact 👤</div>
-
-    <div class="logo-container">
-      <img src="assets/logo.png" alt="Sakura Biotech Logo" class="logo">
-      <span class="logo-text">Sakura Biotech</span>
-    </div>
-
-    <label for="main-navigation-toggle" class="menu" id="menuToggle">☰ Menu</label>
-  </header>
+  <a href="contact.html" class="contact">Contact 👤</a>
+  <div class="logo-container">
+    <img src="assets/logo.png" alt="Sakura Biotech Logo" class="logo">
+    <span class="logo-text">Sakura Biotech</span>
+  </div>
+  <div class="menu" id="menuToggle">☰ Menu</div>
+</header>
 
   <!-- MENU OVERLAY -->
-<input type="checkbox" id="main-navigation-toggle" class="btn btn--close" title="Toggle main navigation" />
+  <nav class="menu-overlay" id="menuOverlay">
+    <div class="close-button" id="menuClose">✕</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html#home">Index</a></li>
+      <li><a href="more.html">More</a></li>
+    </ul>
+  </nav>
 
-<nav id="main-navigation" class="nav-main">
-  <div class="close-btn" onclick="document.getElementById('main-navigation-toggle').checked = false;">×</div>
-  <ul class="menu">
-    <li class="menu__item">
-      <a class="menu__link" href="#home">Home</a>
-    </li>
-    <li class="menu__item">
-      <a class="menu__link" href="#about">About</a>
-    </li>
-    <li class="menu__item">
-      <a class="menu__link" href="#mission">Mission & Values</a>
-    </li>
-    <li class="menu__item">
-      <a class="menu__link" href="#highlights">Highlights</a>
-    </li>
-    <li class="menu__item">
-      <a class="menu__link" href="#supports">Supports</a>
-    </li>
-    <li class="menu__item">
-      <a class="menu__link" href="#preview-data">Data Preview</a>
-    </li>
-  </ul>
-</nav>
 
 <!-- =========================================
        PAGE 1: FUNGUS AMONG US
